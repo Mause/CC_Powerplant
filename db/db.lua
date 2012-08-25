@@ -64,8 +64,8 @@ function setup_database()
         safe_mkdir(db_root_dir)
         safe_mkdir(db_root_dir.."/users")
 
-        print 'Downloading crc api...'
-        download_api(baseurl..'api/crc.lua', '/api/crc')
+        -- print 'Downloading crc api...'
+        -- download_api(baseurl..'api/crc.lua', '/api/crc')
     end
 end
 
@@ -80,7 +80,8 @@ function run_server()
             local message = param2
             local distance = param3
             message = textutils.unserialize(message)
-            print (message)
+            print (message.query)
+            print (message.password)
         end
     end
 end
