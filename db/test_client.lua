@@ -1,5 +1,5 @@
 rednet.open("left")
-rednet.accounce()
+rednet.announce()
 while true do
     print rednet.recieve()
 end
